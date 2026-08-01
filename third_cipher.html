@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KODOKRIPTOGMATIKA</title>
+  <link rel="stylesheet" href="https://demo-styles.deno.deno.net/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <style>
+    h1 {
+      text-align: center;
+    }
+  </style>
+
+  <main>
+    <section>
+      <div class="pigpen">
+        <img src="https://www.dcode.fr/tools/pigpen/images/char(86).png" alt="char(86)">
+        <img src="https://www.dcode.fr/tools/pigpen/images/char(79).png" alt="char(79)">
+        <img src="https://www.dcode.fr/tools/pigpen/images/char(68).png" alt="char(68)">
+        <img src="https://www.dcode.fr/tools/pigpen/images/char(69).png" alt="char(69)">
+        <img src="https://www.dcode.fr/tools/pigpen/images/char(78).png" alt="char(78)">
+        <img src="https://www.dcode.fr/tools/pigpen/images/char(80).png" alt="char(80)">
+        <img src="https://www.dcode.fr/tools/pigpen/images/char(82).png" alt="char(82)">
+        <img src="https://www.dcode.fr/tools/pigpen/images/char(65).png" alt="char(65)">
+        <img src="https://www.dcode.fr/tools/pigpen/images/char(83).png" alt="char(83)">
+        <img src="https://www.dcode.fr/tools/pigpen/images/char(69).png" alt="char(69)">
+      </div>
+    </section>
+
+    <form onsubmit="checkAnswer(event)">
+      <label for="answer">Vaš Odgovor</label>
+      <input type="text" id="answer">
+
+      <button>
+        Otključaj 3. šifru
+      </button>
+    </form>
+
+    <section>
+      <hr>
+
+      <h3 style="text-align: center;">HINT:</h3>
+
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.freepik.com%2Fpremium-vector%2Fcute-happy-pig-sitting-cartoon-vector-white-background_1026278-7240.jpg%3Fw%3D2000&f=1&nofb=1&ipt=b0aa3759c864e36e5ee0d3ac8d1164963626ead9f596e479923dda15d55728b1" 
+        alt="Zamislite sliku svinja">
+    </section>
+  </main>
+  
+  <script>
+    function checkAnswer(event) {
+      event.preventDefault();
+      const input = document.getElementById("answer").value.trim().toLowerCase();
+
+      if (input === "vodenprase") {
+        window.location.href = "solution.html"; 
+      } else {
+        alert("Netočan odgovor! Pokušajte ponovno.");
+      }
+    }
+  </script>
+</body>
+</html>

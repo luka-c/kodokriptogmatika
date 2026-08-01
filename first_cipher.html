@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KODOKRIPTOGMATIKA</title>
+  <link rel="stylesheet" href="https://demo-styles.deno.deno.net/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <style>
+    h1 {
+      text-align: center;
+    }
+  </style>
+
+  <main>
+    <section>
+      <h1>
+          LSBFS
+      </h1>
+    </section>
+
+    <form onsubmit="checkAnswer(event)">
+      <label for="answer">Vaš Odgovor</label>
+      <input type="text" id="answer">
+
+      <button>
+        Otključaj 1. šifru
+      </button>
+    </form>
+
+    <section>
+      <hr>
+
+      <h3 style="text-align: center;">
+        HINT:
+      </h3>
+
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngkey.com%2Fpng%2Ffull%2F579-5796339_roman-numeral-eight.png&f=1&nofb=1&ipt=91814f82d96fe93a455c98ca158c468bc6d6a91ac5051417aa623847970c99c5"
+       alt="VIII">
+    </section>
+  </main>
+  
+  <script>
+    function checkAnswer(event) {
+      event.preventDefault();
+      const input = document.getElementById("answer").value.trim().toLowerCase();
+
+      if (input === "tajna") {
+        window.location.href = "second_cipher.html"; 
+      } else {
+        alert("Netočan odgovor! Pokušajte ponovno.");
+      }
+    }
+  </script>
+</body>
+</html>

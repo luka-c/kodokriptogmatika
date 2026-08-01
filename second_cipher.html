@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KODOKRIPTOGMATIKA</title>
+  <link rel="stylesheet" href="https://demo-styles.deno.deno.net/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <style>
+    h1 {
+      text-align: center;
+    }
+  </style>
+
+  <main>
+    <section>
+      <h1>
+        -- --- .-. ... .
+      </h1>
+    </section>
+
+    <form onsubmit="checkAnswer(event)">
+      <label for="answer">Vaš Odgovor</label>
+      <input type="text" id="answer">
+
+      <button>
+        Otključaj 2. šifru
+      </button>
+    </form>
+
+    <section>
+      <hr>
+
+      <h3 style="text-align: center;">HINT:</h3>
+
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FCETGq7sqytE%2Fmaxresdefault.jpg&f=1&nofb=1&ipt=d295a746c3f700e03b2efb5a3bbf88a7c45a9c61ab49a68071e7cf869ca54ce2"
+        alt="SOS">
+    </section>
+  </main>
+  
+  <script>
+    function checkAnswer(event) {
+      event.preventDefault();
+      const input = document.getElementById("answer").value.trim().toLowerCase();
+
+      if (input === "morse") {
+        window.location.href = "third_cipher.html"; 
+      } else {
+        alert("Netočan odgovor! Pokušajte ponovno.");
+      }
+    }
+  </script>
+</body>
+</html>
